@@ -29,3 +29,8 @@
     cd trlx-0.7.0/
     pip install -e .
     ```
+
+1. Use accelerate launch
+    ```shell
+    accelerate launch --config_file config/default_config.yaml piqa.py
+    ```
