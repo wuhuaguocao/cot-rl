@@ -1,0 +1,8 @@
+torch
+torchvision
+torchaudio
+datasets>=1.17.0
+tqdm
+transformers
+accelerate
+peft>=0.3.0
