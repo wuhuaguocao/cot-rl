@@ -20,17 +20,13 @@ import re
 
 
 
-# piqads = load_dataset('/mnt/nasdata/zhiyu/dataset/piqa/', cache_dir='/mnt/nasdata/zhiyu/dataset/piqa/')
-piqads = load_dataset('./dataset/piqa', cache_dir='./dataset/piqa')
+
+piqads = load_dataset('piqa', cache_dir='./dataset/piqa')
 file_path = "./dataset/piqa/prompt1.txt"
 with open(file_path, 'r') as file:
     file_contents = file.read()
 prefix = file_contents
-# def get_prompt(dic):
-#     prompt = prefix + f"\nChoose the solution to achieve the goal:\n### Goal: {dic['goal']}: \n### Solution1: {dic['sol1']}\n### Solution2: {dic['sol2']}\n### Let's think step by step:"
-#     dic.update({'prompt': prompt})
-#     return dic
-# ds = ds.map(get_prompt)
+
 def wrapper(dic):
     string = "\nChoose the solution to achieve the goal and give answer in bracket:"
     key = list(dic.keys())
@@ -62,13 +58,9 @@ def reward_fn(outputs, prompts, samples):
         pattern = r"goal:.*"
         split_sign = prefix[-300:]
         question = re.findall(pattern=pattern, string=prompt.split(split_sign)[-1])
-        # print(prompt[len(prefix):len(prompt)], prefix, prompt, sep='\n\n')
-        # print(split_sign)
-        print()
+
         if len(question) < 1:
-            print("-"*300)
-            print(prompt)
-            print("-"*300)
+
             rewards.append(float(0))
         else:
             question = question[0][6:]
