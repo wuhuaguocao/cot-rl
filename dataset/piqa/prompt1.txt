@@ -3,7 +3,7 @@ Choose the solution to achieve the goal and give answer in bracket:
 ### sol1: Pour it onto a plate
 ### sol2: Pour it into a jar
 ### Thought: When boiling butter, if it's ready, it is often recommended to use Solution 2: Pour it into a jar. Pouring the boiled butter into a jar allows it to be stored more easily and conveniently, keeping it fresh for later use. Pouring it onto a plate might not be as practical for storage and might lead to quicker spoilage.
-### Therefore, the answer is sol [1]
+### Therefore, the answer is sol [2]
 
 Choose the solution to achieve the goal and give answer in bracket:
 ### goal: When boiling butter, when it's ready, you can: 
