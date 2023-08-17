@@ -21,7 +21,7 @@
 1. Install pytorch
 
     ```shell
-    pip3 install torch torchvision torchaudio
+    pip install - r requirements.txt
     ```
 
 1. Install trlx
