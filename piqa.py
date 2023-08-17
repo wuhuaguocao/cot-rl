@@ -72,7 +72,7 @@ def llama_config():
     return TRLConfig(
         train=TrainConfig(
             seq_length=1024,
-            epochs=100,
+            epochs=10,
             total_steps=100000,
             batch_size=1,
             checkpoint_interval=1000,
