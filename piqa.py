@@ -40,7 +40,7 @@ ds = piqads.map(wrapper)
 ds = ds.shuffle(seed=42)
 
 
-def reward_fn(outputs, prompts, samples):
+def reward_fn(outputs, prompts, samples, **kwargs):
     rewards = []
     for output, prompt in zip(outputs, prompts):
         prompt_len = len(prompt)
