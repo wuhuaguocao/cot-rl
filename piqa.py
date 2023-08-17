@@ -37,6 +37,7 @@ def wrapper(dic):
     return dic
 
 ds = piqads.map(wrapper)
+ds = ds.shuffle(seed=42)
 
 
 def reward_fn(outputs, prompts, samples):
@@ -72,7 +73,7 @@ def llama_config():
         train=TrainConfig(
             seq_length=1024,
             epochs=100,
-            total_steps=6000,
+            total_steps=100000,
             batch_size=1,
             checkpoint_interval=1000,
             eval_interval=100,
@@ -105,11 +106,11 @@ def llama_config():
             cliprange_reward=10,
             gen_kwargs=dict(
                 max_new_tokens=256,
-                top_k=0,
-                top_p=1.0,
+                top_k=50,
+                top_p=0.95,
                 temperature=1.0,
                 do_sample=True,
-                repetition_penalty=1.2
+                repetition_penalty=1.1
             ),
         ),
     )
@@ -122,7 +123,7 @@ config = TRLConfig.update(llama_config().to_dict(), {})
 config.model.peft_config = LoraConfig(
     lora_alpha=32,
     lora_dropout=0.1,
-    r=8,
+    r=32,
     bias="none",
     task_type="CAUSAL_LM",
     )
