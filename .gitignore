@@ -1,0 +1,3 @@
+dataset/piqa_old/*
+dataset/piqa.tar
+dataset/piqa.tar.gzip

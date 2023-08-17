@@ -83,18 +83,16 @@ def llama_config():
         train=TrainConfig(
             seq_length=1024,
             epochs=100,
-            total_steps=100,
+            total_steps=6000,
             batch_size=1,
-            checkpoint_interval=100,
-            eval_interval=10,
+            checkpoint_interval=1000,
+            eval_interval=100,
             pipeline="PromptPipeline",
             trainer="AcceleratePPOTrainer",
             save_best=True,
         ),
-        # model=ModelConfig(model_path="/mnt/nasdata/zhiyu/llama/Llama-2-7b-hf", num_layers_unfrozen=2),
-        # tokenizer=TokenizerConfig(tokenizer_path="/mnt/nasdata/zhiyu/llama/Llama-2-7b-hf", truncation_side="left"),
-        model=ModelConfig(model_path="./model/Llama-2-7b-hf", num_layers_unfrozen=2),
-        tokenizer=TokenizerConfig(tokenizer_path="./model/Llama-2-7b-hf", truncation_side="left"),
+        model=ModelConfig(model_path="./model/llama-2-7b-hf", num_layers_unfrozen=2),
+        tokenizer=TokenizerConfig(tokenizer_path="./model/llama-2-7b-hf", truncation_side="left"),
         optimizer=OptimizerConfig(
             name="adamw", kwargs=dict(lr=1.0e-5, betas=(0.9, 0.95), eps=1.0e-8, weight_decay=1.0e-6)
         ),
@@ -102,7 +100,7 @@ def llama_config():
         method=PPOConfig(
             name="PPOConfig",
             num_rollouts=128,
-            chunk_size=1,
+            chunk_size=4,
             ppo_epochs=4,
             init_kl_coef=0.05,
             target=6,
