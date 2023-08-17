@@ -10,7 +10,7 @@ deepspeed_config:
   # offload_optimizer_device: cpu
 distributed_type: DEEPSPEED
 # distributed_type: MULTI_GPU
-downcast_bf16: no
+downcast_bf16: yes
 dynamo_config: {}
 fsdp_config: {}
 machine_rank: 0
