@@ -18,7 +18,7 @@
     git clone https://huggingface.co/daryl149/llama-2-7b-chat-hf
     ```
 
-1. Install pytorch
+1. Install packages
 
     ```shell
     pip install - r requirements.txt
