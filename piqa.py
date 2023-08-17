@@ -47,9 +47,6 @@ def reward_fn(outputs, prompts, samples):
         pattern = r"\[\d\]"
         result = re.findall(pattern=pattern, string=gen_output)
         if len(result) < 1:
-            print("#"*300)
-            print(output)
-            print("#"*300)
             rewards.append(float(0))
             continue
         else:
