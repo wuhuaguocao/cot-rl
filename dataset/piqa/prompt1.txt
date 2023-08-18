@@ -6,11 +6,11 @@ Choose the solution to achieve the goal and give answer in bracket:
 ### Therefore, the answer is sol [2]
 
 Choose the solution to achieve the goal and give answer in bracket:
-### goal: When boiling butter, when it's ready, you can: 
-### sol1: Pour it onto a plate
+### goal: To permanently attach metal legs to a chair, you can: 
+### sol1: Weld the metal together to get it to stay firmly in place
 ### sol2: Pour it into a jar
-### Thought: When boiling butter, if it's ready, it is often recommended to use Solution 2: Pour it into a jar. Pouring the boiled butter into a jar allows it to be stored more easily and conveniently, keeping it fresh for later use. Pouring it onto a plate might not be as practical for storage and might lead to quicker spoilage.
-### Therefore, the answer is sol [2]
+### Thought:To permanently attach metal legs to a chair, it is recommended to use Solution 1: Weld the metal together to get it to stay firmly in place. Welding involves melting and fusing the metal pieces together, creating a strong and durable bond. This ensures that the legs stay securely attached to the chair even with regular use over an extended period. On the other hand, nailing the metal together may not provide sufficient strength and stability, and the nails could loosen or fail over time.
+### Therefore, the answer is sol [1].
 
 Choose the solution to achieve the goal and give answer in bracket:
 ### goal: how do you indent something?: 
